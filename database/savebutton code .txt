@@ -1,0 +1,20 @@
+<div class="col">
+         <form action="" method="post" class="save-list">
+            <input type="hidden" name="list_id" value="<?= $post_id; ?>">
+            <?php
+               if($select_bookmark->rowCount() > 0){
+            ?>
+            <button type="submit" name="save_list"><i class="fas fa-bookmark"></i><span>saved</span></button>
+            <?php
+               }else{
+            ?>
+               <button type="submit" name="save_list"><i class="far fa-bookmark"></i><span>save</span></button>
+            <?php
+               }
+            ?>
+         </form>
+         <div class="thumb">
+           
+            <img src="uploaded_files/<?= $fetch_post['thumb']; ?>" alt="">
+         </div>
+      </div>
